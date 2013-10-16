@@ -8,19 +8,54 @@
 						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 						http://www.springframework.org/schema/context 
 						http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-<!-- 
-SPRING CONFIGS
- -->
-<context:component-scan base-package="br.com.sisgr" />
-<mvc:annotation-driven />
-<mvc:default-servlet-handler />
 
-<!-- 
-VIEW RESOLVER
- -->
-<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	<property name="prefix" value="/WEB-INF/views/" />
-	<property name="suffix" value=".jsp" />
-</bean>
+	<!-- SPRING CONFIGS -->
+	<context:component-scan base-package="br.com.sisgr" />
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+
+
+	<!-- VIEW RESOLVER -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+	<!-- MYSQL DATA SOURCE -->
+	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost/sisgr" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+
+	<!-- SESSION FACTORY -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="mysqlDataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value></value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.transaction.auto_close_session">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- TRANSACTION MANAGER -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 
 </beans>
