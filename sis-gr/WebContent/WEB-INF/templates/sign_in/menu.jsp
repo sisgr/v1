@@ -1,7 +1,7 @@
 <%-- Fragmento com trecho utilizado no menu de navegacao. --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <div style="background-color: #ffffff">
-	<ul class="nav nav-list">
+	<ul class="nav nav-pills nav-stacked	">
 		<li class="nav-header">MENU</li>
 		<li class="active"><a href="#">Agenda</a></li>
 		<li><a href="#">Reuniões</a></li>
