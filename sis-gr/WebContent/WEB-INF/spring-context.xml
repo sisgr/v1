@@ -34,6 +34,9 @@
 		<property name="password" value="root" />
 	</bean>
 
+	<mvc:interceptors>
+		<bean class="br.com.sisgr.interceptors.AutorizadorInterceptor"/>
+	</mvc:interceptors>
 
 	<!-- SESSION FACTORY -->
 	<bean id="sessionFactory"
@@ -44,13 +47,14 @@
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.transaction.auto_close_session">true</prop>
 			</props>
 		</property>
 		<property name="annotatedClasses">
 			<list>
 				<value>br.com.sisgr.model.Usuario</value>
+				<value>br.com.sisgr.model.Reuniao</value>
 			</list>
 		</property>
 	</bean>

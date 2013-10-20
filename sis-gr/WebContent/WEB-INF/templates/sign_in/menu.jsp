@@ -1,11 +1,13 @@
-<%-- Fragmento com trecho utilizado no menu de navegacao. --%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<div style="background-color: #ffffff">
-	<ul class="nav nav-pills nav-stacked	">
-		<li class="nav-header">MENU</li>
-		<li class="active"><a href="#">Agenda</a></li>
-		<li><a href="#">Reuniões</a></li>
-		<li><a href="#">Contatos</a></li>
-		<li><a href="#">Tarefas</a></li>
+
+<div class="well" style="width: 130px; padding: 8px 0;">
+	<ul class="nav nav-list">
+		<li class="nav-header">Menu</li>
+		<li><a href=""><i class="icon-calendar"></i>Agenda</a></li>
+		<li><a href="#"><i class="icon-comment"></i>Reuniões</a></li>
+		<li><a href="#"><i class="icon-list"></i>Tarefas</a></li>
+		<li><a href="#"><i class="icon-user"></i>Contato</a></li>
+		<li class="divider"></li>
+		
+		<li><a href="#"><i class="icon-download-alt"></i>Exportar</a></li>
 	</ul>
 </div>

@@ -7,28 +7,8 @@
 					<form class="form-horizontal" action="adicionaUsuario"
 						method="POST">
 						<div class="heading">
-							<h2>Cadastre-se!</h2>
+							<h2>Faça seu Login</h2>
 							<hr>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="nome">Nome</label>
-							<div class="controls">
-								<input type="text" name="nome" id="nome" placeholder="Seu nome">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="sobrenome">Sobrenome</label>
-							<div class="controls">
-								<input type="text" name="sobrenome" id="sobrenome"
-									placeholder="Seu sobrenome">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="email">Email</label>
-							<div class="controls">
-								<input type="text" name="email" id="email"
-									placeholder="email@exemplo.com">
-							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="login">Login</label>
@@ -45,7 +25,7 @@
 						</div>
 						<hr>
 						<div>
-								<button type="submit" class="btn btn-success">Cadastrar</button>
+								<button type="submit" class="btn btn-success">Logar</button>
 							
 						</div>
 					</form>

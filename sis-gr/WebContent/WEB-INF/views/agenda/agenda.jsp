@@ -1,7 +1,3 @@
-<div> 
-
-<h1> 
-Agenda aqui!
-</h1>
-
-</div>
+<div class="well" id="calendar">
+	
+</div> 

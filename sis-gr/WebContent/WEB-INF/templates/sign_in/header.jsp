@@ -19,19 +19,26 @@
 			</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="/sis-gr"><i class="icon-home"></i>Home</a></li>
+					<li><a href="inicio"><i class="icon-home"></i>Home</a></li>
 					<li class="divider-vertical"></li>
 				</ul>
 				<ul class="nav pull-right">
-					<li><a href="cadastro">Cadastre-se</a></li>
+					<li><a>Bem Vindo!</a></li>
 					<li class="divider-vertical"></li>
 					<li class="dropdown"><a class="dropdown-toggle" href="#"
 						data-toggle="dropdown">Sua conta<strong class="caret"></strong></a>
 
-						<div class="dropdown-menu"
-							style="padding: 15px; padding-bottom: 0px;">
-							<a href="sair"  class="btn btn-danger btn-block">Sair</a>
-						</div></li>
+
+						<ul class="dropdown-menu">
+							<li><a href="/user/preferences"><i class="icon-cog"></i>
+									Preferências</a></li>
+							<li><a href="#"><i class="icon-envelope"></i>
+									Contato Suporte</a></li>
+							<li class="divider"></li>
+							<li><a href="sair"><i class="icon-off"></i>
+									Sair</a></li>
+						</ul>
+						
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

@@ -19,7 +19,7 @@
 			</a> 
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="/sis-gr"><i class="icon-home"></i>Home</a></li>
+					<li><a href="inicio"><i class="icon-home"></i>Home</a></li>
 					<li class="divider-vertical"></li>
 				</ul>
 				<ul class="nav pull-right">
@@ -30,6 +30,8 @@
 						
 						<div class="dropdown-menu"	style="padding: 15px; padding-bottom: 0px;">
 							
+							
+							<!-- FORM LOGIN -->
 							<form method="post" action="logar" accept-charset="UTF-8">
 								<input style="margin-bottom: 15px;" type="text" placeholder="login" id="login" name="login">
 								 
@@ -41,6 +43,8 @@
 									
 									<input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Login com Google">
 							</form>
+							
+							
 						</div></li>
 				</ul>
 			</div>

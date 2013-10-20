@@ -42,4 +42,8 @@
         <put-attribute name="body" value="/WEB-INF/views/agenda/agenda.jsp" />
     </definition>
     
+      <definition name="usuario/login" extends=".indexTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/usuario/login.jsp" />
+    </definition>
+    
 </tiles-definitions>

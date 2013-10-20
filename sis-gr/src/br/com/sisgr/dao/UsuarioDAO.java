@@ -11,18 +11,24 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.sisgr.model.Usuario;
 
 @Repository
-public class UsuarioDAOHibernate {
+public class UsuarioDAO {
 
 	private SessionFactory factory;
 	
 	@Autowired
-	public UsuarioDAOHibernate(SessionFactory factory){
+	public UsuarioDAO(SessionFactory factory){
 		this.factory = factory;
 	}
 	
 	@Transactional
-	public void adicionar(Usuario usuario){
+	public boolean adicionar(Usuario usuario){
 		factory.openSession().save(usuario);
+		
+		if (existeUsuario(usuario) != false){
+			return true;
+		}else{
+			return false;
+		}	
 	}
 	
 	@Transactional
@@ -32,6 +38,21 @@ public class UsuarioDAOHibernate {
 		query.executeUpdate();
 	}
 	
+	@Transactional(readOnly=true)
+	public boolean existeUsuario(Usuario usuario){
+		Criteria cri = factory.openSession().createCriteria(Usuario.class);
+		cri.add(Restrictions.ilike("login", usuario.getLogin()));
+		cri.add(Restrictions.ilike("senha",usuario.getSenha()));
+		Usuario us = (Usuario) cri.uniqueResult();
+		
+		if (us != null){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	@Transactional(readOnly=true)
 	public Usuario buscar(Usuario usuario){
 		Criteria cri = factory.openSession().createCriteria(Usuario.class);
 		cri.add(Restrictions.ilike("login", usuario.getLogin()));
