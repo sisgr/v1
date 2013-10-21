@@ -1,5 +1,4 @@
-
-<div class="well" style="width: 130px; padding: 8px 0;">
+<div class="well" style="width: 140px; padding: 8px 0;">
 	<ul class="nav nav-list">
 		<li class="nav-header">Menu</li>
 		<li><a href=""><i class="icon-calendar"></i>Agenda</a></li>

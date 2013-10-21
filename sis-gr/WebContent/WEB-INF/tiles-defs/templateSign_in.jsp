@@ -4,7 +4,6 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!doctype html>
 <html>
 <head>
@@ -67,6 +66,35 @@
 					);
 				}
 				calendar.fullCalendar('unselect');
+			},monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+			monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+			dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+			dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],
+			buttonText: {
+				prev: '&nbsp;&#9668;&nbsp;',
+				next: '&nbsp;&#9658;&nbsp;',
+				prevYear: '&nbsp;&lt;&lt;&nbsp;',
+				nextYear: '&nbsp;&gt;&gt;&nbsp;',
+				today: 'hoje',
+				month: 'mês',
+				week: 'semana',
+				day: 'dia'
+			},		
+			titleFormat: {
+				month: 'MMMM yyyy',
+				week: "d [ yyyy]{ '&#8212;'[ MMM] d MMM yyyy}",
+				day: 'dddd, d MMM, yyyy'
+			},
+			columnFormat: {
+				month: 'ddd',
+				week: 'ddd d/M',
+				day: 'dddd d/M'
+			},
+			allDayText: 'dia todo',
+			axisFormat: 'H:mm',
+			timeFormat: {
+				'': 'H(:mm)',
+				agenda: 'H:mm{ - H:mm}'
 			},
 			editable : true,
 			events : [ {
@@ -111,22 +139,19 @@
 	});
 </script>
 <!-- // -->
-
 <style>
 body {
-	margin-top: 40px;
+	
 	text-align: center;
 	font-size: 14px;
 	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
 }
 
 #calendar {
-	width: 700px;
+	width: 735px;
 	margin: 0 auto;
 }
 </style>
-
-
 <title>SisGR</title>
 </head>
 
@@ -138,14 +163,14 @@ body {
 	</div>
 
 	<div class="container">
-		<div>
-			<tiles:insertAttribute name="menu" />
+		<div class="row-fluid">
+			<div class="span2">
+				<tiles:insertAttribute name="menu" />
+			</div>
+			<div class="span10">
+				<tiles:insertAttribute name="body" />
+			</div>
 		</div>
-		<div class="span8">
-			<tiles:insertAttribute name="body" />
-		</div>
-
-
 	</div>
 	<footer>
 		<tiles:insertAttribute name="footer" ignore="true" />

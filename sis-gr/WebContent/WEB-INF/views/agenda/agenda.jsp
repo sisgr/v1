@@ -1,3 +1,1 @@
-<div class="well" id="calendar">
-	
-</div> 
+<div class="well" id="calendar"></div> 

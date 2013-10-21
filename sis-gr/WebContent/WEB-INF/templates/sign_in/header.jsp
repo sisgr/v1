@@ -29,8 +29,8 @@
 						data-toggle="dropdown">Sua conta<strong class="caret"></strong></a>
 
 
-						<ul class="dropdown-menu">
-							<li><a href="/user/preferences"><i class="icon-cog"></i>
+						<ul class="dropdown-menu" >
+							<li><a href="/user/preferences" ><i class="icon-cog"></i>
 									Preferências</a></li>
 							<li><a href="#"><i class="icon-envelope"></i>
 									Contato Suporte</a></li>
