@@ -10,20 +10,26 @@
 						http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<!-- SPRING CONFIGS -->
+
 	<context:component-scan base-package="br.com.sisgr" />
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
 
+
+
 	<!-- VIEW RESOLVER -->
-	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
-		<property name="definitions"> 
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
 			<list>
 				<value>/WEB-INF/tiles-defs/templates.xml</value>
 			</list>
 		</property>
 	</bean>
-	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-		<property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
+	<bean id="tilesViewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles2.TilesView" />
 	</bean>
 
 	<!-- MYSQL DATA SOURCE -->
@@ -35,14 +41,14 @@
 	</bean>
 
 	<mvc:interceptors>
-		<bean class="br.com.sisgr.interceptors.AutorizadorInterceptor"/>
+		<bean class="br.com.sisgr.interceptors.AutorizadorInterceptor" />
 	</mvc:interceptors>
 
 	<!-- SESSION FACTORY -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="mysqlDataSource" />
-		
+
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>

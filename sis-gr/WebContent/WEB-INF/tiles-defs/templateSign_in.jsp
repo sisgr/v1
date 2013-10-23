@@ -158,7 +158,7 @@ body {
 <body>
 	<div class="header">
 		<div class="container">
-			<tiles:insertAttribute name="header" ignore="true" />
+			<tiles:insertAttribute name="header" ignore="true" />  
 		</div>
 	</div>
 

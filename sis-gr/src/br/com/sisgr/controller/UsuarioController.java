@@ -1,11 +1,12 @@
 package br.com.sisgr.controller;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import br.com.sisgr.dao.UsuarioDAO;
 import br.com.sisgr.model.Usuario;
@@ -31,15 +32,21 @@ public class UsuarioController {
 	}
 
 	@RequestMapping("/adicionaUsuario")
-	public ModelAndView adicionar(Usuario usuario, HttpSession session) {
+public String adicionar(@Valid Usuario usuario, BindingResult result,  HttpSession session) {
+		
+		if(result.hasErrors()){
+			System.out.println("executou");
+			
+			return "redirect:/cadastro";
+		}
+		
+		
 		boolean rs = dao.adicionar(usuario);
 		
 		if (rs != false) 
 			session.setAttribute("usuarioLogado", usuario);			
 		
-		ModelAndView mv = new ModelAndView("usuario/sucesso");
-		mv.addObject("usuario", usuario);
-		return mv;
+		return "usuario/sucesso";
 	}
 
 	@RequestMapping("/sair")

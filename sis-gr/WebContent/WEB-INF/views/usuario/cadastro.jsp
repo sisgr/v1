@@ -1,3 +1,7 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <div class="container">
 		<div class="hero-unit">
 	<div class="row-fluid">
@@ -10,10 +14,13 @@
 							<h2>Cadastre-se!</h2>
 							<hr>
 						</div>
+						
+						<form:errors path="nome"/>
 						<div class="control-group">
 							<label class="control-label" for="nome">Nome</label>
 							<div class="controls">
-								<input type="text" name="nome" id="nome" placeholder="Seu nome">
+								
+								<input type="text" name="nome" id="nome" placeholder="Seu nome"> 
 							</div>
 						</div>
 						<div class="control-group">
