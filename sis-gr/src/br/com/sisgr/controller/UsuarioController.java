@@ -60,10 +60,13 @@ public String adicionar(@Valid Usuario usuario, BindingResult result,  HttpSessi
 		
 		if (dao.existeUsuario(usuario) != false) {
 			session.setAttribute("usuarioLogado",usuario);
-			return "agenda/agenda";
+			return "";
 		}
 			return "redirect:/cadastro";
 	}
+	
+	
+
 	
 
 }

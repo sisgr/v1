@@ -41,8 +41,7 @@ public class UsuarioDAO {
 	@Transactional(readOnly=true)
 	public boolean existeUsuario(Usuario usuario){
 		Criteria cri = factory.openSession().createCriteria(Usuario.class);
-		cri.add(Restrictions.ilike("login", usuario.getLogin()));
-		cri.add(Restrictions.ilike("senha",usuario.getSenha()));
+		cri.add(Restrictions.ilike("email", usuario.getEmail()));
 		Usuario us = (Usuario) cri.uniqueResult();
 		
 		if (us != null){
@@ -55,7 +54,7 @@ public class UsuarioDAO {
 	@Transactional(readOnly=true)
 	public Usuario buscar(Usuario usuario){
 		Criteria cri = factory.openSession().createCriteria(Usuario.class);
-		cri.add(Restrictions.ilike("login", usuario.getLogin()));
+		cri.add(Restrictions.ilike("email", usuario.getEmail()));
 		return (Usuario) cri.uniqueResult();
 	}
 	

@@ -33,7 +33,7 @@
 							
 							<!-- FORM LOGIN -->
 							<form method="post" action="logar" accept-charset="UTF-8">
-								<input style="margin-bottom: 15px;" type="text" placeholder="login" id="login" name="login">
+								<input style="margin-bottom: 15px;" type="text" placeholder="email" id="email" name="email">
 								 
 									<input style="margin-bottom: 15px;" type="password" placeholder="senha" id="senha" name="senha"> 
 									
@@ -41,9 +41,11 @@
 									
 									<hr>
 									
-									<input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Login com Google">
 							</form>
-							
+								
+								<a href="google" class="btn btn-primary btn-block" >Faça login com o Google</a>
+								
+							<br>
 							
 						</div></li>
 				</ul>

@@ -10,10 +10,13 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter{
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object controller) throws Exception{
 		
 		String uri = request.getRequestURI();
-		if(uri.endsWith("cadastro") || uri.endsWith("logar") || uri.endsWith("adicionaUsuario") || uri.endsWith("inicio")
-				|| uri.endsWith("sucesso") || uri.endsWith("formLogin") || uri.contains("resources")) {
-			return true;
+		if(uri.endsWith("cadastro") || uri.endsWith("logar") || uri.endsWith("adicionaUsuario") 
+				|| uri.endsWith("inicio") || uri.endsWith("sucesso") || uri.endsWith("formLogin") 
+				|| uri.contains("resources") || uri.contains("google")){
+			
+						return true;
 		}
+		
 		if(request.getSession().getAttribute("usuarioLogado")!=null) {
 			return true;
 		} else {

@@ -11,9 +11,9 @@
 							<hr>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="login">Login</label>
+							<label class="control-label" for="email">Login</label>
 							<div class="controls">
-								<input type="text" name="login" id="login" placeholder="login">
+								<input type="text" name="email" id="email" placeholder="email">
 							</div>
 						</div>
 						<div class="control-group">

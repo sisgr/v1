@@ -38,7 +38,7 @@
         <put-attribute name="body" value="/WEB-INF/views/usuario/sucesso.jsp" />
     </definition>
     
-    <definition name="agenda/agenda" extends=".mainTemplate">
+    <definition name="agenda" extends=".mainTemplate">
         <put-attribute name="body" value="/WEB-INF/views/agenda/agenda.jsp" />
     </definition>
     

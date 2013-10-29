@@ -15,9 +15,9 @@
 							<hr>
 						</div>
 						
-						<form:errors path="nome"/>
+						
 						<div class="control-group">
-							<label class="control-label" for="nome">Nome</label>
+							<label class="control-label" for="nome">Nome <form:errors path="nome"/></label>
 							<div class="controls">
 								
 								<input type="text" name="nome" id="nome" placeholder="Seu nome"> 
@@ -35,12 +35,6 @@
 							<div class="controls">
 								<input type="text" name="email" id="email"
 									placeholder="email@exemplo.com">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="login">Login</label>
-							<div class="controls">
-								<input type="text" name="login" id="login" placeholder="login">
 							</div>
 						</div>
 						<div class="control-group">
