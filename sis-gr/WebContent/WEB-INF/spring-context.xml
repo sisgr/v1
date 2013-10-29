@@ -40,9 +40,9 @@
 		<property name="password" value="root" />
 	</bean>
 
-	<mvc:interceptors>
-		<bean class="br.com.sisgr.interceptors.AutorizadorInterceptor" />
-	</mvc:interceptors>
+<!-- 	<mvc:interceptors> -->
+<!-- 		<bean class="br.com.sisgr.interceptors.AutorizadorInterceptor" /> -->
+<!-- 	</mvc:interceptors> -->
 
 	<!-- SESSION FACTORY -->
 	<bean id="sessionFactory"
