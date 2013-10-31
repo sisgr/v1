@@ -4,14 +4,14 @@
 		<div class="span3"></div>
 			<div class="span6" align="center">
 				<div class="area">
-					<form class="form-horizontal" action="adicionaUsuario"
+					<form class="form-horizontal" action="logar"
 						method="POST">
 						<div class="heading">
 							<h2>Faça seu Login</h2>
 							<hr>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="email">Login</label>
+							<label class="control-label" for="email">Email</label>
 							<div class="controls">
 								<input type="text" name="email" id="email" placeholder="email">
 							</div>

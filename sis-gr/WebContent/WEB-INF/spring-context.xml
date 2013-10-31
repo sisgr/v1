@@ -14,6 +14,8 @@
 	<context:component-scan base-package="br.com.sisgr" />
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"></bean>
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"></bean>
 
 
 
@@ -37,7 +39,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost/sisgr" />
 		<property name="username" value="root" />
-		<property name="password" value="root" />
+		<property name="password" value="123456" />
 	</bean>
 
 <!-- 	<mvc:interceptors> -->
@@ -53,7 +55,7 @@
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.transaction.auto_close_session">true</prop>
 			</props>
 		</property>
@@ -61,6 +63,7 @@
 			<list>
 				<value>br.com.sisgr.model.Usuario</value>
 				<value>br.com.sisgr.model.Reuniao</value>
+				<value>br.com.sisgr.model.Contato</value>
 			</list>
 		</property>
 	</bean>

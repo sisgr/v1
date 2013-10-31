@@ -38,12 +38,24 @@
         <put-attribute name="body" value="/WEB-INF/views/usuario/sucesso.jsp" />
     </definition>
     
-    <definition name="agenda" extends=".mainTemplate">
+    <definition name="agenda/agenda" extends=".mainTemplate">
         <put-attribute name="body" value="/WEB-INF/views/agenda/agenda.jsp" />
     </definition>
     
-      <definition name="usuario/login" extends=".indexTemplate">
+     <definition name="usuario/login" extends=".indexTemplate">
         <put-attribute name="body" value="/WEB-INF/views/usuario/login.jsp" />
+    </definition>
+    
+    <definition name="contato/contato" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/contato/contato.jsp" />
+    </definition>
+    
+    <definition name="tarefa/tarefa" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/tarefa/tarefa.jsp" />
+    </definition>
+    
+    <definition name="contato/editar" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/contato/editar.jsp" />
     </definition>
     
 </tiles-definitions>

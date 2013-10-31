@@ -72,7 +72,8 @@ public class GoogleController
             usuario.setSobrenome(jObj.getString("family_name"));
             usuario.setEmail(jObj.getString("email"));
             usuario.setSenha("senha"); 
-//            System.out.println("nome" + usuario.getNome() + " email: " + usuario.getEmail());
+            
+            System.out.println("nome" + usuario.getNome() + " email: " + usuario.getEmail());
             
             /**
              * Verificando se o usuário existe no banco, caso exista faz o login. 
@@ -80,6 +81,7 @@ public class GoogleController
              */
             if (dao.existeUsuario(usuario) != false)
             {
+            	usuario = dao.buscarByEmail(usuario);
             	session.setAttribute("usuarioLogado", usuario);
             }else 
             {
@@ -88,6 +90,6 @@ public class GoogleController
             }
         }
         
-         return "agenda";
+         return "agenda/agenda";
     }
 }

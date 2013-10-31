@@ -19,7 +19,7 @@
 			</a> 
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="inicio"><i class="icon-home"></i>Home</a></li>
+					<li><a href="/sis-gr/inicio"><i class="icon-home"></i>Home</a></li>
 					<li class="divider-vertical"></li>
 				</ul>
 				<ul class="nav pull-right">
@@ -37,15 +37,13 @@
 								 
 									<input style="margin-bottom: 15px;" type="password" placeholder="senha" id="senha" name="senha"> 
 									
-									<input class="btn btn-primary btn-block" type="submit" id="login" value="Logar">
+									<input class="btn btn-primary btn-block" type="submit" id="email" value="Logar">
 									
 									<hr>
-									
 							</form>
-								
-								<a href="google" class="btn btn-primary btn-block" >Faça login com o Google</a>
-								
+							<a href="google" class="btn btn-primary btn-block" >Faça login com o Google</a>
 							<br>
+							
 							
 						</div></li>
 				</ul>

@@ -19,26 +19,24 @@
 			</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="inicio"><i class="icon-home"></i>Home</a></li>
+					<li><a href="/sis-gr/agenda"><i class="icon-home"></i>Home</a></li>
 					<li class="divider-vertical"></li>
 				</ul>
 				<ul class="nav pull-right">
-					<li><a>Bem Vindo!</a></li>
+					<li><a>Bem Vindo, ${usuarioLogado.nome}</a></li>
 					<li class="divider-vertical"></li>
 					<li class="dropdown"><a class="dropdown-toggle" href="#"
 						data-toggle="dropdown">Sua conta<strong class="caret"></strong></a>
 
 
-						<ul class="dropdown-menu" >
-							<li><a href="/user/preferences" ><i class="icon-cog"></i>
+						<ul class="dropdown-menu">
+							<li><a href="/sis-gr/editar?Cadastro=${usuarioLogado.id}"><i class="icon-cog"></i>
 									Preferências</a></li>
-							<li><a href="#"><i class="icon-envelope"></i>
-									Contato Suporte</a></li>
+							<li><a href="#"><i class="icon-envelope"></i> Contato
+									Suporte</a></li>
 							<li class="divider"></li>
-							<li><a href="sair"><i class="icon-off"></i>
-									Sair</a></li>
+							<li><a href="sair"><i class="icon-off"></i> Sair</a></li>
 						</ul>
-						
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
@@ -48,12 +46,41 @@
 	<!--/.navbar-inner -->
 </div>
 <!--/.navbar -->
+<script src="resources/js/jquery.js"></script>
 
-<script>
+<script type="text/javascript">
+$("form[data-ajax]").submit(function(evt){
+		evt.preventDefault();
+		
+		var url = $(this).attr("action");
+		var data = $(this).serialize();
+		var method $(this).attr("method");
+		
+		$.ajax({
+			url: url,
+			data: data,
+			dataType: method,
+			success: function(){
+				alert("funcionou.");
+			},
+			error: function(){
+				alert("Erro.");
+			}
+		});
+	});
+</script>
+
+<script type="text/javascript">
 	$(document).ready(function() {
 		//Handles menu drop down
 		$('.dropdown-menu').find('form').click(function(e) {
 			e.stopPropagation();
 		});
 	});
+
+	
+
 </script>
+
+
+
